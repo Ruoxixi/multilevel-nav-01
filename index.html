@@ -8,6 +8,8 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/base.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/multilevel-nav-01.css" media="screen">
   </head>
   <body>
     <section class="page-header">
@@ -19,7 +21,57 @@
     </section>
 
     <section class="main-content">
-      <p>multilevel-nav-01</p>
+      <!--提示：多级菜单：
+1.html结构：
+    <ul>
+        <li><a title="" href="" target="_blank">自定义菜单</a></li>
+    </ul>
+2.菜单不易过多；
+3.菜单名单不易太长；
+-->
+<div style="width:980px;margin:0 auto;">
+    <div class="dev-shop-nav clearfix">
+        <ul class="dev-nav">
+            <li><a title="" href="" target="_blank">首页</a></li>
+            <li>
+                <a title="" href="" target="_blank">全部分类</a>
+                <ul class="clearfix">
+                    <li>
+                        <a title="" href="" target="_blank">一级菜单1</a>
+                        <ul>
+                            <li><a title="" href="" target="_blank">二级菜单11</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单12</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单13</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a title="" href="" target="_blank">一级菜单2</a>
+                        <ul>
+                            <li><a title="" href="" target="_blank">二级菜单21</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单22</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a title="" href="" target="_blank">一级菜单3</a>
+                        <ul>
+                            <li><a title="" href="" target="_blank">二级菜单31</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单32</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单33</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a title="" href="" target="_blank">自定义导航1</a></li>
+            <li>
+                <a title="" href="" target="_blank">自定义导航2</a>
+                <ul>
+                    <li><a title="" href="" target="_blank">一级菜单1</a></li>
+                    <li><a title="" href="" target="_blank">一级菜单2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/Ruoxixi/multilevel-nav-01">Multilevel-nav-01</a> is maintained by <a href="https://github.com/Ruoxixi">Ruoxixi</a>.</span>
