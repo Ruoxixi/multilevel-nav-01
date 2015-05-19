@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>多级菜单-css(multilevel-nav-01)</title>
+    <style>
+        .dev-shop-nav{height:30px;background-color:#a50000;font-size:12px;}/*height:1号店官方导航为30px;background:[可以为背景色，也可以为背景图]:font-size:[导航文本字号]*/
+        .dev-shop-nav .dev-nav li{position:relative;}/*position:[必须指定]*/
+        .dev-shop-nav .dev-nav > li{float:left;border-right:1px solid #9b6767;line-height:30px;}/*float:[必须指定];border:[可选值];line-height:[根据导航高度定义] 注意：此处标签的选择采用的是“>”,选择的li标签仅仅只是一级菜单。*/
+        .dev-shop-nav .dev-nav > li a{display:block;padding:0 10px;color:#fff;white-space:nowrap;}/*padding:[可以修改];color:[可以修改] 注意：选择的a标签为一级菜单li下所有的a标签*/
+        .dev-shop-nav .dev-nav > li ul{display:none;position:absolute;z-index:198;min-width:100%;background-color:#bb0000;}/*display,position:[必须指定];z-index:[可根据实际情况调整，但是建议不要设置太大的值，后期不好维护];min-width:[如果不指定二级菜单及子菜单的宽度，必须指定];background:[可以为背景色，也可以为背景图] 注意：选择的ul标签为一级菜单li下所有的ul子菜单*/
+        .dev-shop-nav .dev-nav > li > ul{top:30px;left:0;}/*top:[相对于父类导航的top值];left:[相对于父类导航left值]; 注意：此处ul设置的top和left是一级菜单的位置*/
+        .dev-shop-nav .dev-nav > li > ul ul{top:0;left:100%;border-left:1px solid #9b6767;}/*border:[可选值];注意：此处ul设置的top和left是一级菜单的子类ul的位置*/
+        .dev-shop-nav .dev-nav > li > ul li{*float:left;*min-width:100%;}/*注意：解决ie7（包含ie7）以下浏览器3px间距的bug*/
+
+        .dev-shop-nav .dev-nav li:hover > ul{display:block;}/*注意：显示对应的子菜单*/
+        .dev-shop-nav .dev-nav > li a:hover{background-color:#cd0000;}/*注意：导航鼠标移上去的效果*/
+    </style>
+</head>
+<body>
+<!--提示：多级菜单：
+1.html结构：
+    <ul>
+        <li><a title="" href="" target="_blank">自定义菜单</a></li>
+    </ul>
+2.菜单不易过多；
+3.菜单名单不易太长；
+-->
+<div style="width:980px;margin:0 auto;">
+    <div class="dev-shop-nav clearfix">
+        <ul class="dev-nav">
+            <li><a title="" href="" target="_blank">首页</a></li>
+            <li>
+                <a title="" href="" target="_blank">全部分类</a>
+                <ul class="clearfix">
+                    <li>
+                        <a title="" href="" target="_blank">一级菜单1</a>
+                        <ul>
+                            <li><a title="" href="" target="_blank">二级菜单11</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单12</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单13</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a title="" href="" target="_blank">一级菜单2</a>
+                        <ul>
+                            <li><a title="" href="" target="_blank">二级菜单21</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单22</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a title="" href="" target="_blank">一级菜单3</a>
+                        <ul>
+                            <li><a title="" href="" target="_blank">二级菜单31</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单32</a></li>
+                            <li><a title="" href="" target="_blank">二级菜单33</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a title="" href="" target="_blank">自定义导航1</a></li>
+            <li>
+                <a title="" href="" target="_blank">自定义导航2</a>
+                <ul>
+                    <li><a title="" href="" target="_blank">一级菜单1</a></li>
+                    <li><a title="" href="" target="_blank">一级菜单2</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
+
+
